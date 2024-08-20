@@ -1,0 +1,79 @@
+#container {
+  text-align: center;
+
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+#container strong {
+  font-size: 20px;
+  line-height: 26px;
+}
+
+#container p {
+  font-size: 16px;
+  line-height: 22px;
+
+  color: #8c8c8c;
+
+  margin: 0;
+}
+
+#container a {
+  text-decoration: none;
+}
+
+ion-content ion-toolbar {
+  --background: translucent;
+}
+
+$cell-size: 72px;
+$cell-margin: 6px;
+
+.game-board {
+  border-radius: 4px;
+  background-color: darkgray;
+  width: #{($cell-size + $cell-margin) * 4 + $cell-margin};
+  height: #{($cell-size + $cell-margin) * 4 + $cell-margin};
+  margin: 0 auto;
+}
+
+.game-row {
+  display: flex;
+}
+
+.game-cell {
+  border-radius: 2px;
+  display: flex;
+  font-size: 2.0em;
+  margin: $cell-margin 0 0 $cell-margin;
+  width: $cell-size;
+  height: $cell-size;
+  background-color: gray;
+  color: black;
+  justify-content: center;
+  align-items: center;
+
+  &.empty {
+    color: gray;
+  }
+
+  &.level-1 {
+    background-color: lightyellow;
+  }
+
+  &.level-2 {
+    background-color: lightcyan;
+  }
+
+  &.level-3 {
+    background-color: lightpink;
+  }
+
+  &.level-4 {
+    background-color: lightsalmon;
+  }
+}
